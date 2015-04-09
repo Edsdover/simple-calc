@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title SimpleCalc
+    link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
+    link(rel='shortcut icon', href='/favicon.ico')
+  body
+    h1 SimpleCalc
+    container.main
+      div
+        p#display 0
+      .row1
+        button.number 7
+        button.number 8
+        button.number 9
+        button.operator +
+      .row2
+        button.number 4
+        button.number 5
+        button.number 6
+        button.operator -
+      .row3
+        button.number 1
+        button.number 2
+        button.number 3
+        button.operator X
+      .row4
+        button.number 0
+        button#decimal .
+        button#return =
+        button.operator ÷
+
+    script(src='/vendor/jquery/dist/jquery.min.js')
+    script(src=isProd ? '/index.min.js' : '/index.js')
